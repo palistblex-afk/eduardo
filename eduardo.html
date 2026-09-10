@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luiz Eduardo Barros | Advocacia e Consultoria Jurídica</title>
+  <meta name="description" content="Luiz Eduardo Barros - Advocacia e Consultoria Jurídica. Atendimento jurídico em Palmares - PE.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --azul: #0b1f33;
+      --azul-2: #102d48;
+      --dourado: #c9a45c;
+      --dourado-claro: #e4c985;
+      --branco: #ffffff;
+      --cinza: #f5f5f3;
+      --texto: #24303b;
+      --cinza-texto: #68727c;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 31, 51, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 164, 92, 0.25);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .logo-icon {
+      width: 43px;
+      height: 43px;
+      border: 1px solid var(--dourado);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dourado);
+      font-family: Georgia, serif;
+      font-size: 22px;
+    }
+
+    .logo-text strong {
+      display: block;
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 17px;
+      letter-spacing: .5px;
+    }
+
+    .logo-text span {
+      display: block;
+      color: var(--dourado-claro);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: var(--dourado-claro);
+    }
+
+    .nav-button {
+      padding: 11px 18px;
+      border: 1px solid var(--dourado);
+      color: var(--dourado-claro) !important;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(7, 22, 37, .90), rgba(7, 22, 37, .94)),
+        radial-gradient(circle at 75% 30%, #28435d, #071625 60%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border: 1px solid rgba(201,164,92,.16);
+      border-radius: 50%;
+      right: -120px;
+      top: 15%;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(201,164,92,.08);
+      border-radius: 50%;
+      right: -220px;
+      top: 5%;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      padding: 120px 25px 70px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: var(--dourado-claro);
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--dourado-claro);
+    }
+
+    .hero p {
+      color: #d5dce2;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 38px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: .3s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--dourado);
+      color: var(--azul);
+    }
+
+    .btn-primary:hover {
+      background: var(--dourado-claro);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.4);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--dourado);
+      color: var(--dourado-claro);
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .section-header .eyebrow {
+      color: #a07c39;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: normal;
+      color: var(--azul);
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: var(--cinza-texto);
+    }
+
+    /* SOBRE */
+
+    .about {
+      background: var(--cinza);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--azul);
+      min-height: 420px;
+      padding: 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .about-box::before {
+      content: "LEX";
+      position: absolute;
+      font-family: Georgia, serif;
+      font-size: 150px;
+      color: rgba(255,255,255,.025);
+      font-weight: bold;
+    }
+
+    .about-symbol {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      border: 1px solid var(--dourado);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dourado-claro);
+      font-family: Georgia, serif;
+      font-size: 70px;
+    }
+
+    .about-content h2 {
+      font-family: Georgia, serif;
+      color: var(--azul);
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--cinza-texto);
+      margin-bottom: 18px;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 2px;
+      background: var(--dourado);
+      margin: 20px 0;
+    }
+
+    /* SERVIÇOS */
+
+    .services {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 35px 30px;
+      border: 1px solid #e3e5e7;
+      background: white;
+      transition: .3s;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--dourado);
+      box-shadow: 0 15px 35px rgba(0,0,0,.07);
+    }
+
+    .service-number {
+      color: var(--dourado);
+      font-family: Georgia, serif;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .service-card h3 {
+      color: var(--azul);
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--cinza-texto);
+      font-size: 14px;
+    }
+
+    /* DIFERENCIAIS */
+
+    .differentials {
+      background: var(--azul);
+      color: white;
+    }
+
+    .differentials .section-header h2 {
+      color: white;
+    }
+
+    .differentials .section-header p {
+      color: #bbc5ce;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .feature-icon {
+      width: 65px;
+      height: 65px;
+      border: 1px solid var(--dourado);
+      color: var(--dourado-claro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-family: Georgia, serif;
+      font-size: 24px;
+    }
+
+    .feature h3 {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #adb9c3;
+      font-size: 13px;
+    }
+
+    /* CONTATO */
+
+    .contact {
+      background: #f7f7f5;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-info {
+      background: var(--azul);
+      color: white;
+      padding: 45px;
+    }
+
+    .contact-info h2 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info > p {
+      color: #bfc9d1;
+      margin-bottom: 35px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      min-width: 40px;
+      height: 40px;
+      border: 1px solid var(--dourado);
+      color: var(--dourado-claro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-item small {
+      color: var(--dourado-claro);
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      color: white;
+      font-size: 15px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 45px;
+      border: 1px solid #e2e2e2;
+    }
+
+    .contact-form h3 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      color: var(--azul);
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      color: #46515b;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d9dde0;
+      outline: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--dourado);
+    }
+
+    .form-group textarea {
+      height: 115px;
+      resize: vertical;
+    }
+
+    .form-button {
+      width: 100%;
+      border: none;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: var(--dourado);
+      padding: 65px 25px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: Georgia, serif;
+      font-size: 38px;
+      color: var(--azul);
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #334252;
+      margin-bottom: 25px;
+    }
+
+    .cta .btn {
+      background: var(--azul);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #071625;
+      color: white;
+      padding: 40px 25px 25px;
+    }
+
+    .footer-content {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .footer-brand strong {
+      font-family: Georgia, serif;
+      font-size: 19px;
+    }
+
+    .footer-brand p {
+      color: #9ba8b3;
+      font-size: 13px;
+      margin-top: 7px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .social {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 13px;
+    }
+
+    .social:hover {
+      border-color: var(--dourado);
+      color: var(--dourado-claro);
+    }
+
+    .copyright {
+      max-width: 1150px;
+      margin: 20px auto 0;
+      color: #687581;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      z-index: 999;
+      box-shadow: 0 5px 20px rgba(0,0,0,.25);
+      transition: .3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-box {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 65px 18px;
+      }
+
+      .navbar {
+        padding: 15px 18px;
+      }
+
+      .hero-container {
+        padding: 120px 18px 60px;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .section-header h2 {
+        font-size: 34px;
+      }
+
+      .services-grid,
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box,
+      .contact-info,
+      .contact-form {
+        padding: 30px 23px;
+      }
+
+      .contact-info h2 {
+        font-size: 30px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+
+      <a href="#inicio" class="logo">
+        <div class="logo-icon">LB</div>
+
+        <div class="logo-text">
+          <strong>Luiz Eduardo Barros</strong>
+          <span>Advocacia & Consultoria</span>
+        </div>
+      </a>
+
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Atuação</a>
+        <a href="#contato">Contato</a>
+
+        <a
+          href="https://wa.me/5581997438931"
+          target="_blank"
+          class="nav-button">
+          Falar com advogado
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Advocacia & Consultoria Jurídica
+          </div>
+
+          <h1>
+            Segurança jurídica para
+            <span>decisões importantes.</span>
+          </h1>
+
+          <p>
+            Atendimento jurídico profissional, estratégico e personalizado
+            para pessoas e empresas que buscam orientação segura para
+            proteger seus direitos e interesses.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="https://wa.me/5581997438931?text=Olá%2C%20Dr.%20Luiz%20Eduardo.%20Gostaria%20de%20agendar%20uma%20consulta."
+              target="_blank"
+              class="btn btn-primary">
+              Agendar atendimento
+            </a>
+
+            <a href="#servicos" class="btn btn-outline">
+              Conheça nossa atuação
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-box">
+
+            <div class="about-symbol">
+              ⚖
+            </div>
+
+          </div>
+
+          <div class="about-content">
+
+            <div class="eyebrow">
+              Excelência e compromisso
+            </div>
+
+            <h2>
+              Advocacia feita com estratégia e responsabilidade.
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p>
+              A Luiz Eduardo Barros - Advocacia e Consultoria Jurídica
+              oferece atendimento individualizado, buscando compreender
+              cada situação de forma detalhada para apresentar caminhos
+              jurídicos claros e estratégicos.
+            </p>
+
+            <p>
+              Nosso compromisso é prestar um atendimento ético,
+              transparente e dedicado, colocando a segurança jurídica
+              do cliente como prioridade.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVIÇOS -->
+    <section class="services" id="servicos">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Áreas de atuação
+          </div>
+
+          <h2>
+            Soluções jurídicas
+          </h2>
+
+          <p>
+            Atendimento personalizado de acordo com as necessidades
+            de cada cliente.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>Consultoria Jurídica</h3>
+            <p>
+              Orientação jurídica estratégica para auxiliar na tomada
+              de decisões e prevenção de problemas.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Direito Civil</h3>
+            <p>
+              Atuação em questões relacionadas a contratos,
+              responsabilidades, obrigações e relações civis.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Direito de Família</h3>
+            <p>
+              Orientação jurídica em questões familiares com
+              atendimento cuidadoso, reservado e personalizado.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">04</div>
+            <h3>Atuação Judicial</h3>
+            <p>
+              Representação e acompanhamento de processos judiciais
+              com estratégia e atenção a cada etapa.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">05</div>
+            <h3>Prevenção Jurídica</h3>
+            <p>
+              Análise de situações e documentos para reduzir riscos
+              e proporcionar maior segurança jurídica.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">06</div>
+            <h3>Atendimento Personalizado</h3>
+            <p>
+              Cada caso é analisado individualmente para oferecer
+              orientação adequada às necessidades do cliente.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DIFERENCIAIS -->
+    <section class="differentials">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Nosso compromisso
+          </div>
+
+          <h2>
+            Por que escolher nosso escritório?
+          </h2>
+
+          <p>
+            Um atendimento jurídico baseado em confiança,
+            responsabilidade e estratégia.
+          </p>
+
+        </div>
+
+
+        <div class="features">
+
+          <div class="feature">
+
+            <div class="feature-icon">✓</div>
+
+            <h3>Ética</h3>
+
+            <p>
+              Atuação pautada pelos princípios éticos da advocacia.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">◆</div>
+
+            <h3>Estratégia</h3>
+
+            <p>
+              Análise cuidadosa para buscar soluções jurídicas eficientes.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">§</div>
+
+            <h3>Experiência</h3>
+
+            <p>
+              Conhecimento jurídico aplicado de maneira prática.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">◈</div>
+
+            <h3>Confiança</h3>
+
+            <p>
+              Atendimento transparente e relacionamento próximo.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Entre em contato
+          </div>
+
+          <h2>
+            Vamos conversar sobre seu caso
+          </h2>
+
+          <p>
+            Entre em contato para obter informações sobre atendimento
+            e agendamento de consulta.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+          <!-- INFORMAÇÕES -->
+
+          <div class="contact-info">
+
+            <h2>
+              Fale conosco
+            </h2>
+
+            <p>
+              Utilize um dos canais abaixo para entrar em contato
+              com o escritório.
+            </p>
+
+
+            <div class="contact-item">
+
+              <div class="contact-icon">☎</div>
+
+              <div>
+                <small>Telefone / WhatsApp</small>
+
+                <a
+                  href="tel:+5581997438931">
+                  (81) 99743-8931
+                </a>
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-icon">⌖</div>
+
+              <div>
+
+                <small>Endereço</small>
+
+                <span>
+                  R. Luzia Pedrosa, 593A<br>
+                  Centro, Palmares - PE<br>
+                  CEP 55540-000
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-icon">◉</div>
+
+              <div>
+
+                <small>Instagram</small>
+
+                <a
+                  href="https://www.instagram.com/luizbarrosadv/"
+                  target="_blank">
+                  @luizbarrosadv
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FORMULÁRIO -->
+
+          <div class="contact-form">
+
+            <h3>
+              Solicite um atendimento
+            </h3>
+
+            <form
+              onsubmit="enviarWhatsApp(event)">
+
+              <div class="form-group">
+
+                <label for="nome">
+                  Nome
+                </label>
+
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="Seu nome"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="telefone">
+                  Telefone
+                </label>
+
+                <input
+                  type="tel"
+                  id="telefone"
+                  placeholder="(00) 00000-0000"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="mensagem">
+                  Como podemos ajudar?
+                </label>
+
+                <textarea
+                  id="mensagem"
+                  placeholder="Descreva brevemente o motivo do contato..."
+                  required></textarea>
+
+              </div>
+
+
+              <button
+                type="submit"
+                class="btn btn-primary form-button">
+
+                Enviar pelo WhatsApp
+
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          Precisa de orientação jurídica?
+        </h2>
+
+        <p>
+          Entre em contato e saiba como podemos ajudar.
+        </p>
+
+        <a
+          href="https://wa.me/5581997438931?text=Olá%2C%20Dr.%20Luiz%20Eduardo.%20Gostaria%20de%20mais%20informações%20sobre%20o%20atendimento."
+          target="_blank"
+          class="btn">
+
+          Falar pelo WhatsApp
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+
+        <strong>
+          Luiz Eduardo Barros
+        </strong>
+
+        <p>
+          Advocacia e Consultoria Jurídica
+        </p>
+
+      </div>
+
+
+      <div class="footer-social">
+
+        <a
+          class="social"
+          href="https://www.instagram.com/luizbarrosadv/"
+          target="_blank"
+          aria-label="Instagram">
+          IG
+        </a>
+
+        <a
+          class="social"
+          href="https://wa.me/5581997438931"
+          target="_blank"
+          aria-label="WhatsApp">
+          WA
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © <span id="ano"></span>
+      Luiz Eduardo Barros - Advocacia e Consultoria Jurídica.
+      Todos os direitos reservados.
+
+    </div>
+
+  </footer>
+
+
+  <!-- BOTÃO WHATSAPP -->
+
+  <a
+    href="https://wa.me/5581997438931?text=Olá%2C%20Dr.%20Luiz%20Eduardo.%20Encontrei%20o%20site%20e%20gostaria%20de%20informações."
+    target="_blank"
+    class="whatsapp"
+    aria-label="Falar no WhatsApp">
+
+    ☎
+
+  </a>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    // Ano automático
+    document.getElementById("ano").textContent =
+      new Date().getFullYear();
+
+
+    // Formulário envia diretamente para WhatsApp
+    function enviarWhatsApp(event) {
+
+      event.preventDefault();
+
+      const nome =
+        document.getElementById("nome").value;
+
+      const telefone =
+        document.getElementById("telefone").value;
+
+      const mensagem =
+        document.getElementById("mensagem").value;
+
+
+      const texto =
+        `Olá, Dr. Luiz Eduardo!
+
+Meu nome é ${nome}.
+
+Telefone: ${telefone}
+
+Gostaria de informações sobre atendimento.
+
+Mensagem:
+${mensagem}`;
+
+
+      const url =
+        "https://wa.me/5581997438931?text=" +
+        encodeURIComponent(texto);
+
+
+      window.open(url, "_blank");
+
+    }
+
+  </script>
+
+</body>
+</html>
